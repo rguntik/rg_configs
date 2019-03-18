@@ -15,6 +15,8 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs histor
 
 plugins=(git)
 
+fpath=(~/rg_configs $fpath)
+
 source $ZSH/oh-my-zsh.sh
 
 alias zshconfig="mate ~/.zshrc"
