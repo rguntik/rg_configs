@@ -2,7 +2,12 @@ source ~/.fonts/*.sh
 
 export ZSH="/home/dart/.oh-my-zsh"
 export TERM="xterm-256color"
+
+if [[ -n $RGIDE ]]; then
+  ZSH_THEME="robbyrussell"
+else
 ZSH_THEME="powerlevel9k/powerlevel9k"
+fi
 
 POWERLEVEL9K_MODE='awesome-fontconfig'
 
@@ -23,3 +28,4 @@ alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias toolbox="~/workspace/oht/toolbox.sh"
 
+alias lzd='lazydocker'
