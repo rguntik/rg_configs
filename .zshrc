@@ -4,9 +4,9 @@ export ZSH="/home/dart/.oh-my-zsh"
 export TERM="xterm-256color"
 
 if [[ -n $RGIDE ]]; then
-  ZSH_THEME="robbyrussell"
+	ZSH_THEME="amuse"
 else
-ZSH_THEME="powerlevel9k/powerlevel9k"
+	ZSH_THEME="powerlevel9k/powerlevel9k"
 fi
 
 POWERLEVEL9K_MODE='awesome-fontconfig'
@@ -27,5 +27,7 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias toolbox="~/workspace/oht/toolbox.sh"
+alias c="xclip -sel clip"
+alias pi="~/./workspace/pi/pi"
 
 alias lzd='lazydocker'
