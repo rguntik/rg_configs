@@ -1,0 +1,79 @@
+#compdef toolbox.sh
+typeset -A opt_args
+
+_arguments -C \
+	'1:cmd1:->cmd1' \
+	'2:cmd2:->cmd2' \
+	'*:: :->args' \
+	&& ret=0
+
+case "$state" in
+	(cmd1)
+		local SERVICES=(
+		"cron:Cron commands"
+		"version"
+		"mysqldump"
+		"clear_rmq"
+		"apidoc"
+		"acceptance"
+		"prune"
+		"mysql_restore"
+		"clean_docker"
+		"logs"
+		"down"
+		"list_rmq"
+		"up"
+		"ssh"
+		"branch"
+		"install:Fresh install OHT on this host"
+		"install-mynmt:setup OHT MyNMT"
+		"install-nmt:setup OHT NMT API server"
+		"install-crowdin:setup OHT Crowdin service"
+		"unit"
+		"memcache"
+		"ui"
+		"fixer"
+		"restart_sweatshop"
+		"db"
+		"composer"
+		)
+
+		_describe -t SERVICES 'SERVICES' SERVICES && ret=0
+		;;
+	(cmd2)
+		declare -A ACTIONS
+		ACTIONS[cron]="run list"
+		ACTIONS[db]="migrate list console init"
+		ACTIONS[up]="-d"
+		ACTIONS[install]="nmt"
+		ACTIONS[composer]="install update require"
+		ACTIONS[memcache]="clear stats version cli help"
+		ACTIONS[restart_sweatshop]="--non-interactive"
+		ACTIONS[fixer]="checkonly autofix help"
+		ACTIONS[ui]="build short_description help"
+		ACTIONS[branch]="-f -p --pull -np --no-pull -f --fetch-origin"
+
+		ACT=$line[1]
+
+		if test "${ACTIONS[$ACT]+isset}"
+		then
+			LIST=${ACTIONS[$ACT]}
+
+			#compadd $LIST
+			cmd2_list=($(echo "${ACTIONS[$ACT]}" | tr " " "\n"))
+			_describe 'cmd2_list' cmd2_list && ret=0
+		fi
+
+		;;
+	(args)
+		if [ ${line[2]} = "run" ] ; then 
+			compadd $(find ~/workspace/oht/scripts/periodic -type f | grep -v /disabled | grep -oP "periodic\/\K(.*)")
+		fi
+		if [ ${line[2]} = "migrate" ] ; then
+			compadd add latest
+		fi
+
+		;;
+esac
+
+return 1
