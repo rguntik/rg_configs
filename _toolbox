@@ -1,4 +1,4 @@
-#compdef toolbox.sh pi
+#compdef toolbox
 typeset -A opt_args
 
 _arguments -C \

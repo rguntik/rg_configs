@@ -18,7 +18,7 @@ else
    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=( status root_indicator background_jobs history ram )
 fi
 
-plugins=(git symfony-console docker docker-compose)
+plugins=(git symfony-console docker docker-compose fzf-zsh zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -44,12 +44,15 @@ _symfonyContainerCompdef() {
 }
 
 authPhpSsh="docker exec authentication_php php bin/console"
-alias lego_auth_console=$authPhpSsh
+authPhpSshTi="docker exec -ti authentication_php php bin/console"
+alias lego_auth_console=$authPhpSshTi
+
 compdef '_symfonyContainerCompdef $authPhpSsh' lego_auth_console
 
+# autocompleate for aliases
 setopt complete_aliases
-########################################################################
-
 fpath=(~/rg_configs $fpath)
 autoload -U compinit
 compinit
+
+########################################################################

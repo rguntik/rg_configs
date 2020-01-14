@@ -1,0 +1,28 @@
+Description:
+  Creates the configured database
+
+Usage:
+  doctrine:database:create [options]
+
+Options:
+      --shard=SHARD              The shard connection to use for this command
+      --connection[=CONNECTION]  The connection to use for this command
+      --if-not-exists            Don't trigger an error, when the database already exists
+  -h, --help                     Display this help message
+  -q, --quiet                    Do not output any message
+  -V, --version                  Display this application version
+      --ansi                     Force ANSI output
+      --no-ansi                  Disable ANSI output
+  -n, --no-interaction           Do not ask any interactive question
+  -e, --env=ENV                  The Environment name. [default: "dev"]
+      --no-debug                 Switches off debug mode.
+  -v|vv|vvv, --verbose           Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Help:
+  The doctrine:database:create command creates the default connections database:
+  
+      php bin/console doctrine:database:create
+  
+  You can also optionally specify the name of a connection to create the database for:
+  
+      php bin/console doctrine:database:create --connection=default
