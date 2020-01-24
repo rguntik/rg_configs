@@ -7,8 +7,8 @@
 awk '
 BEGIN{OFS="-------------------------"}
 match($1, /^\-+/) {
-print $0
-#print $1,$NF
+#print $0
+print $1,$NF
 }
 ' tmp.txt
 

@@ -42,6 +42,7 @@ case "$state" in
 		"rebuild:Rebuild images (for docker maintainer, others please use pull)"
 		"run-api-test:Run API tests"
 		"run-acceptance-test:Run acceptance tests"
+		"ms"
 		)
 
 		_describe -t SERVICES 'SERVICES' SERVICES && ret=0
@@ -57,6 +58,7 @@ case "$state" in
 		ACTIONS[fixer]="checkonly autofix help"
 		ACTIONS[ui]="build short_description help"
 		ACTIONS[branch]="-f -p --pull -np --no-pull -f --fetch-origin"
+		ACTIONS[ms]="clone list exclude docker-compose build up logs down stop ms-path init update"
 
 		ACT=$line[1]
 

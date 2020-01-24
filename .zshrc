@@ -18,12 +18,13 @@ else
    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=( status root_indicator background_jobs history ram )
 fi
 
-plugins=(git symfony-console docker docker-compose fzf-zsh zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(vi-mode git symfony-console docker docker-compose fzf-zsh zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
 bindkey "e[1~" beginning-of-line
 bindkey "e[4~" end-of-line
+bindkey "^@" vi-forward-char
 
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
