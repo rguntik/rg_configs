@@ -18,7 +18,7 @@ else
    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=( status root_indicator background_jobs history ram )
 fi
 
-plugins=(vi-mode git symfony-console docker docker-compose fzf-zsh zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(vi-mode git symfony-console docker docker-compose fzf-zsh zsh-autosuggestions zsh-syntax-highlighting common-aliases)
 
 source $ZSH/oh-my-zsh.sh
 
