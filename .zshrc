@@ -1,5 +1,3 @@
-# source ~/.fonts/*.sh
-
 export ZSH="/home/dart/.oh-my-zsh"
 export TERM="xterm-256color"
 
@@ -13,9 +11,11 @@ else
    POWERLEVEL9K_PROMPT_ON_NEWLINE=true
    POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 
-   POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=( os_icon dir vcs )
+   POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=( vi_mode os_icon dir vcs )
 
    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=( status root_indicator background_jobs history ram )
+   POWERLEVEL9K_VI_INSERT_MODE_STRING="I"
+   POWERLEVEL9K_VI_COMMAND_MODE_STRING="N"
 fi
 
 plugins=(vi-mode git symfony-console docker docker-compose fzf-zsh zsh-autosuggestions zsh-syntax-highlighting common-aliases)
