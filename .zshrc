@@ -4,7 +4,6 @@ export TERM="xterm-256color"
 if [ -z "$TMUX" ]; then
    ZSH_THEME="amuse"
 else
-# sudo apt-get install fonts-powerline
    ZSH_THEME="powerlevel9k/powerlevel9k"
    POWERLEVEL9K_MODE='awesome-fontconfig'
 
@@ -18,7 +17,7 @@ else
    POWERLEVEL9K_VI_COMMAND_MODE_STRING="N"
 fi
 
-plugins=(vi-mode git symfony-console docker docker-compose fzf-zsh zsh-autosuggestions zsh-syntax-highlighting common-aliases)
+plugins=(vi-mode git symfony-console docker docker-compose fzf-zsh zsh-autosuggestions zsh-syntax-highlighting common-aliases colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -29,9 +28,10 @@ bindkey "^@" vi-forward-char
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias toolbox="~/workspace/oht/toolbox.sh"
-alias c="xclip -sel clip"
+alias c="| xclip -sel clip"
 alias pi="~/./workspace/pi/run.sh"
 alias listendump="toolbox exec php /ohtmain/oht/oht.php /ohtmain/oht/RGCli/listendump/listendump.php"
+alias localPatch="~/./workspace/oht/RGCli/patch/localPatch.sh"
 
 ########################################################################
 _symfonyContainerCompdefGetRaw() {
