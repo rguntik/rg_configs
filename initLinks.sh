@@ -6,4 +6,4 @@ ln -s ~/rg_configs/.vimrc ~/.vimrc
 
 ln -s ~/rg_configs/.tmux.conf ~/.tmux.conf
 
-ln -s ~/rg_configs/.zshrc ~/.tmux.conf
+ln -s ~/rg_configs/.zshrc ~/.zshrc
