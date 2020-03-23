@@ -1,4 +1,4 @@
-export ZSH="/home/dart/.oh-my-zsh"
+export ZSH="/home/roma/.oh-my-zsh"
 export TERM="xterm-256color"
 
 if [ -z "$TMUX" ]; then
@@ -17,7 +17,7 @@ else
    POWERLEVEL9K_VI_COMMAND_MODE_STRING="N"
 fi
 
-plugins=(vi-mode git symfony-console docker docker-compose fzf-zsh zsh-autosuggestions zsh-syntax-highlighting common-aliases colored-man-pages oht-toolbox)
+plugins=(vi-mode git symfony-console docker docker-compose fzf-zsh zsh-autosuggestions zsh-syntax-highlighting common-aliases colored-man-pages zsh-oht-toolbox)
 
 source $ZSH/oh-my-zsh.sh
 

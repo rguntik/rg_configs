@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#[oh-my-zsh] plugin 'symfony-console' not found
+https://github.com/mnapoli/zsh-symfony-console-plugin
+#[oh-my-zsh] plugin 'fzf-zsh' not found
+https://github.com/wyntau/fzf-zsh
+#[oh-my-zsh] plugin 'zsh-autosuggestions' not found
+https://github.com/zsh-users/zsh-autosuggestions
+#[oh-my-zsh] plugin 'zsh-syntax-highlighting' not found
+#[oh-my-zsh] plugin 'oht-toolbox' not found
+git clone https://github.com/mnapoli/zsh-symfony-console-plugin.git symfony-console
