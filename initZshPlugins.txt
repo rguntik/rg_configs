@@ -6,5 +6,9 @@ https://github.com/wyntau/fzf-zsh
 #[oh-my-zsh] plugin 'zsh-autosuggestions' not found
 https://github.com/zsh-users/zsh-autosuggestions
 #[oh-my-zsh] plugin 'zsh-syntax-highlighting' not found
+https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
 #[oh-my-zsh] plugin 'oht-toolbox' not found
 git clone https://github.com/mnapoli/zsh-symfony-console-plugin.git symfony-console
+
+pov
+https://github.com/gabrielelana/awesome-terminal-fonts
