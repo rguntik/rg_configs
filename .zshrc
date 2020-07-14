@@ -27,7 +27,7 @@ bindkey "^@" vi-forward-char
 
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
-# alias toolbox="~/workspace/oht/toolbox.sh"
+alias rgtm="~/./rg_configs/tmux.sh"
 alias c="| xclip -sel clip"
 alias pi="~/./workspace/pi/run.sh"
 alias listendump="toolbox exec php /ohtmain/oht/oht.php /ohtmain/oht/RGCli/listendump/listendump.php"
