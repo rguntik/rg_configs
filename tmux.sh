@@ -14,7 +14,7 @@ tmux selectp -t 2
 tmux send-keys "cd ~/workspace/mnemo_php" C-m
 tmux send-keys "tmux swap-pane -U " C-m
 tmux send-keys "reset" C-m
-tmux send-keys "./getLast.sh " C-m
+tmux send-keys "vlast" C-m
 
 #==============================================================================
 # Select pane 1 run cm

@@ -33,6 +33,10 @@ alias pi="~/./workspace/pi/run.sh"
 alias listendump="toolbox exec php /ohtmain/oht/oht.php /ohtmain/oht/RGCli/listendump/listendump.php"
 alias localPatch="~/./workspace/oht/RGCli/patch/localPatch.sh"
 
+alias clast="~/./workspace/mnemo_php/getLast.sh c"
+alias vlast="~/./workspace/mnemo_php/getLast.sh v"
+alias llast="~/./workspace/mnemo_php/getLast.sh l"
+
 ########################################################################
 _symfonyContainerCompdefGetRaw() {
     eval "$1 --raw" | sed 's/:/\\:/g' | sed 's/ \{2,\}/:/g'
