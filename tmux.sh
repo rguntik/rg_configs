@@ -26,7 +26,7 @@ tmux send-keys "mc" C-m
 # Split pane 1 horizontal by 65%, start redis-server
 tmux splitw -v -p 35
 tmux send-keys "cd ~/workspace/oht" C-m
-tmux send-keys "toolbox up" C-m
+#tmux send-keys "toolbox up" C-m
 #tmux send-keys "reset" C-m
 #------------------------------------------------------------------------------
 # Select pane 2

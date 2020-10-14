@@ -36,7 +36,7 @@ alias localPatch="~/./workspace/oht/RGCli/patch/localPatch.sh"
 alias clast="~/./workspace/mnemo_php/getLast.sh c"
 alias vlast="~/./workspace/mnemo_php/getLast.sh v"
 alias llast="~/./workspace/mnemo_php/getLast.sh l"
-alias mcol="~/./workspace/mnemo_php/getLast.sh color"
+alias ml="~/./workspace/mnemo_php/getLast.sh color"
 
 ########################################################################
 _symfonyContainerCompdefGetRaw() {
