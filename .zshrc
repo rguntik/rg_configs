@@ -1,23 +1,16 @@
-export ZSH="/home/roma/.oh-my-zsh"
-export TERM="xterm-256color"
-if [ -z "$TMUX" ]; then
-   ZSH_THEME="amuse"
-else
-   ZSH_THEME="powerlevel9k/powerlevel9k"
-   POWERLEVEL9K_MODE='awesome-fontconfig'
-
-   POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-   POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
-
-   POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=( vi_mode os_icon dir vcs )
-
-   POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=( status root_indicator background_jobs history ram )
-   POWERLEVEL9K_VI_INSERT_MODE_STRING="I"
-   POWERLEVEL9K_VI_COMMAND_MODE_STRING="N"
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# plugins=(vi-mode git symfony-console docker docker-compose fzf-zsh zsh-autosuggestions zsh-syntax-highlighting common-aliases colored-man-pages zsh-oht-toolbox)
-plugins=(vi-mode git symfony-console docker docker-compose fzf-zsh zsh-autosuggestions zsh-syntax-highlighting common-aliases colored-man-pages)
+export ZSH="/home/roma/.oh-my-zsh"
+export TERM="xterm-256color"
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+plugins=(vi-mode git symfony-console docker docker-compose fzf-zsh zsh-autosuggestions zsh-syntax-highlighting common-aliases colored-man-pages zsh-oht-toolbox)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -59,3 +52,6 @@ autoload -U compinit
 compinit
 
 ########################################################################
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

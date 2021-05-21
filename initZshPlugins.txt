@@ -12,3 +12,6 @@ git clone https://github.com/mnapoli/zsh-symfony-console-plugin.git symfony-cons
 
 pov
 https://github.com/gabrielelana/awesome-terminal-fonts
+
+# install font
+#p10k configure  configure theme
